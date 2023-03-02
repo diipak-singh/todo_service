@@ -1,7 +1,8 @@
 name: RustDeployment AWS Lambda
 
-on: [push]
-  branchs: [main]
+on:
+  push:
+    branchs: [main]
 
 jobs:
   build:
