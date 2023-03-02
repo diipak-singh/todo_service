@@ -40,7 +40,7 @@ jobs:
           TARGET: ${{ matrix.target }}
         continue-on-error: ${{ matrix.allow_failure }}
       - name: Deploy
-        run: echo "Deploying..."
+        run: cargo lambda deploy --iam-role arn:aws:iam::613772788234:role/deepak_rust --enable-function-url http-lambda
         env:
           TARGET: ${{ matrix.target }}
         continue-on-error: ${{ matrix.allow_failure }}
