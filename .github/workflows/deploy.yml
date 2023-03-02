@@ -5,7 +5,7 @@ on:
     branchs: [main]
 
 jobs:
-  aws_cdk:
+  build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -43,4 +43,14 @@ jobs:
       - name: Zip Code for Deployment
         run: "sudo zip -j lambda.zip bootstrap"
         working-directory: ./target/x86_64-unknown-linux-musl/release
+
+       - name: Run Build
+         run: cargo lambda deploy --iam-role FULL_ROLE_ARN --enable-function-url http-lambda
+        
+
+
+
+
+        
+
 
