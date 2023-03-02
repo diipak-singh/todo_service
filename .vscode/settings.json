@@ -1,0 +1,5 @@
+{
+    "yaml.schemas": {
+        "https://raw.githubusercontent.com/deployphp/deployer/master/src/schema.json": "file:///home/chinook/Documents/rustling/todo_service/.github/workflows/deploy.yaml"
+    }
+}
